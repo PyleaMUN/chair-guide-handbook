@@ -82,7 +82,26 @@
             margin-bottom: 5px;
             border-radius: 5px; /* Rounded corners for buttons */
         }
-        .active, .collapsible:hover {
+        
+        /* New class for link-buttons to mimic collapsible style */
+        .link-button {
+            background-color: #008080; /* Darker Teal for collapsibles */
+            color: #FFFFFF; /* White text for collapsible buttons */
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            margin-bottom: 5px;
+            border-radius: 5px; /* Rounded corners for buttons */
+            display: block; /* Make the link a block element */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .active, .collapsible:hover, .link-button:hover {
             background-color: #004C4C; /* Even darker teal on hover/active */
         }
         .content {
@@ -133,7 +152,7 @@
             .content ul:first-child:has(li:not(:has(ul, ol))) {
                 padding-left: 0; /* Remove padding if list-style is none */
             }
-            .collapsible {
+            .collapsible, .link-button {
                 font-size: 1em; /* Ensure button text is readable */
                 padding: 15px;
             }
@@ -153,7 +172,7 @@
         <img src="logo.png" alt="PyleaMUN Logo" class="logo">
 
         <h1>PyleaMUN Chair Guide and Handbook</h1>
-        <p style="text-align: center;">Compiled by Nikolaos Pavlidis Charalampidis and Panagiotis Domvros</p>
+        <p style="text-align: center;">Compiled by Elefteria Paidaraki, Nikolaos Pavlidis Charalampidis and Panagiotis Domvros</p>
 
         <h2>PyleaMUN 2026 Specifics</h2>
         <p>The PyleaMUN 2026 Chair Handbook provides essential information for chairs participating in the conference.</p>
@@ -163,15 +182,10 @@
             <ul>
                 <li>PyleaMUN Team: pyleamun@gmail.com</li>
                 <li>Secretariat: pyleamun.ga@gmail.com</li>
-                <li>Chairing Team: use dedicated WhatsApp group</li>
+                <li>Chairing Team: <a href="https://invite.viber.com/?g=fw_0W0sFh1Vo1SbVCHrrCtx-g8vJS2Rk" target="_blank">use dedicated Viber group</a></li>
                 <li>Press Team: pyleamun.reg@gmail.com</li>
                 <li>Admin Staff: pa.domvros@gmail.com</li>
             </ul>
-        </div>
-
-        <button class="collapsible">Schedule & Rooms</button>
-        <div class="content">
-            <p>To check your committee schedule, visit PyleaMUN.gr/info/schedule or scan the QR code on your badge. Shifts might change, so always follow staff instructions. For committee rooms, check the updated document; rooming can change at the last minute, so follow staff instructions.</p>
         </div>
 
         <button class="collapsible">Chair Accounts</button>
@@ -196,45 +210,9 @@
             <p>Chairs are responsible for stimulating and coordinating debate, encouraging new delegates, and acting as role models. Professional and responsible behavior is fundamental; actions should not be based on personal opinions. Chairs must ensure a positive debate outcome and take initiative for a smooth session and delegate enjoyment. They should have a clear vision for the committee's outcome and plan accordingly, monitoring and revising as needed. If debate stalls, chairs should become more active by encouraging delegates, convening caucuses, drawing attention to new options, or making suggestions based on their knowledge.</p>
         </div>
 
-        <button class="collapsible">Chairing Style</button>
-        <div class="content">
-            <p>A good leader has a clear vision and shares credit. The committee's outcome should be coherent, legally, and technically correct, aiming for a politically sustainable and practically implementable resolution. The goal is to stimulate rather than intimidate.</p>
-        </div>
+        <a class="link-button" href="https://pyleamun.github.io/studyguide-template/" target="_blank">Study Guide Template</a>
 
-        <button class="collapsible">Rules of Procedure</button>
-        <div class="content">
-            <p>Download the Rules of Procedure and Points and Motions List from PyleaMUN.gr/info/rules-of-procedure. These rules ensure efficient formal meetings.</p>
-        </div>
-
-        <button class="collapsible">Points & Motions List</button>
-        <div class="content">
-            <p>This section details various points and motions, their debatability, seconding requirements, voting thresholds, overridability, and when they are used. Examples include:</p>
-            <ul>
-                <li>Point of Personal Privilege: No debate, no second, no vote, not overridable. Addresses personal discomfort or audibility.</li>
-                <li>Point of Information to the Chairs: No debate, no second, no vote, not overridable. Addresses explanations or clarifications not procedural.</li>
-                <li>Point of Parliamentary Enquiry: No debate, no second, no vote, not overridable. Addresses procedural explanations.</li>
-                <li>Point of Order: No debate, no second, no vote, not overridable. Addresses violations of rules.</li>
-                <li>Point of Information: No debate, no second, no vote, not overridable. Allows questions to other delegates regarding speeches, amendments, or resolutions.</li>
-                <li>Motion to extend Points of Information: No debate, yes second, no vote, yes overridable. Allows more points of information.</li>
-                <li>Motion to accept as a Friendly Amendment: No debate, yes second, no vote, no overridable. Passes a first-degree amendment without voting if no submitter objects.</li>
-                <li>Motion to move into Previous Question: No debate, yes second, no vote, yes overridable. Moves debate to voting procedures.</li>
-                <li>Motion to move into Closed Debate: No debate, yes second, no vote, yes overridable. Moves an open debate into a closed one.</li>
-                <li>Motion to move into Open Debate: No debate, yes second, no vote, yes overridable. Moves a closed debate into an open one.</li>
-                <li>Motion to move into Time Against: No debate, yes second, no vote, yes overridable. Moves Time In Favour of a Closed Debate into Time Against.</li>
-                <li>Motion to divide the House: No debate, no second, no vote, yes overridable. Starts a roll-call vote where abstaining is not possible.</li>
-            </ul>
-        </div>
-
-        <button class="collapsible">Lobbying</button>
-        <div class="content">
-            <p>Chairs receive draft resolutions in their committee inbox. They must check:</p>
-            <ul>
-                <li>Editable format (Google Docs/Word) and minimum number of preambulatory and operative clauses.</li>
-                <li>Minimum number of signatures.</li>
-                <li>No lone subclauses or sub-subclauses.</li>
-                <li>Formatting: 12 pt Times New Roman, 1.0 spacing, no double spacing, one blank line between clauses (not subclauses), capital letters at clause beginning, no repetition of introductory phrases, specific punctuation (commas for preambs/subclauses, semicolons for operative clauses, full stop at end), and proper indentation (1), 2) for clauses; a), b) for subclauses; i., ii. for sub-subclauses).</li>
-            </ul>
-        </div>
+        <a class="link-button" href="https://pyleamun.github.io/procedure2026/" target="_blank">Rules of Procedure</a>
 
         <button class="collapsible">Debate</button>
         <div class="content">
